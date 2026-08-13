@@ -1,0 +1,8 @@
+events: 100 #per job
+files_per_job: 3
+files_amount: 3 #-1 for all   docker://
+image: "/cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/cms-cloud/cmssw-docker/slc5-cms:latest" #"docker://gitlab-registry.cern.ch/cms-cloud/cmssw-docker/cmssw_5_3_8_hi_patch2-slc5_amd64_gcc462:latest" #standalone image
+eos_path: "/eos/home-a/aalatalo/snakemaketest/HTCondor-processing"
+global_tag: "GR_P_V43D::All"
+eos_mgm_url: "root://eospublic.cern.ch"
+input_file_list: "PAMuon.txt"

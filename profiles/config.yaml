@@ -1,0 +1,17 @@
+executor: htcondor
+jobs: 1
+max-jobs-per-second: 100
+max-status-checks-per-second: 100
+restart-times: 0
+local-cores: 10
+cores: 1
+htcondor-jobdir: .condor_jobs
+software-deployment-method: apptainer
+apptainer-args: "--bind /cvmfs --bind /afs/cern.ch/user/a/aalatalo/snakemaketest --bind /eos/home-a/aalatalo/snakemaketest/HTCondor-processing --writable-tmpfs"
+#use-singularity: true
+#singularity-args: "--bind /afs/cern.ch/user/a/aalatalo/snakemaketest --bind /eos/home-a/aalatalo/snakemaketest/HTCondor-processing --writable-tmpfs"
+default-resources:
+  - getenv=True
+  - htcondor_request_mem_mb=25024
+  - htcondor_request_disk_mb=25024
+  - classad_JobFlavour=espresso

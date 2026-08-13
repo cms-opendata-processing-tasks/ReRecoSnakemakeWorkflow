@@ -1,0 +1,19 @@
+[workspace]
+authors = ["RedknanRonin <aleksi.alatalo@gmail.com>"]
+channels = ["conda-forge"]
+name = "HTCondor-processing"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+
+
+[dependencies]
+python-htcondor = "<25"
+
+
+[pypi-dependencies]
+snakemake = ">=8"
+snakemake-executor-plugin-htcondor = ">=0.3.0, <0.4"
+
+[tasks]
+snakemake-htcondor = "snakemake --workflow-profile profiles --cores 1"
